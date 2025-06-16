@@ -44,9 +44,9 @@ export default defineType({
       description:
         'Pode ser uma âncora (#features), uma URL externa (https://...) ou um link interno (/cases)',
       validation: (Rule) =>
-        Rule.required().custom((link) => {
-          if (!link) return true
-          const value = String(link) // força como string
+        Rule.custom((link) => {
+          if (!link) return true // deixa opcional
+          const value = String(link)
           const isValid =
             value.startsWith('#') ||
             value.startsWith('/') ||

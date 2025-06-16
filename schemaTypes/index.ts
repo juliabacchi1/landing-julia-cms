@@ -1,2 +1,5 @@
 import hero from './hero'
-export const schemaTypes = [hero]
+import brands from './brands'
+import benefits from './benefits'
+
+export const schemaTypes = [hero, brands, benefits]

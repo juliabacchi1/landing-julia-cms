@@ -26,10 +26,21 @@ export default defineType({
     defineField({
       name: 'ctaLink',
       title: 'Link do botão',
-      type: 'url',
+      type: 'string',
+      description:
+        'Pode ser uma âncora (#features), uma URL externa (https://...) ou um link interno (/cases)',
       validation: (Rule) =>
-        Rule.required().uri({
-          scheme: ['http', 'https', 'mailto', 'tel'],
+        Rule.custom((link) => {
+          if (!link) return 'Campo obrigatório'
+          const value = String(link)
+          const isValid =
+            value.startsWith('#') ||
+            value.startsWith('/') ||
+            value.startsWith('http') ||
+            value.startsWith('mailto:') ||
+            value.startsWith('tel:')
+
+          return isValid || 'O link deve começar com #, /, http(s), mailto: ou tel:'
         }),
     }),
     defineField({

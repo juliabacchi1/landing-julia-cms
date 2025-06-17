@@ -47,6 +47,7 @@ export default defineType({
                   {title: 'LinkedIn', value: 'linkedin'},
                   {title: 'Twitter', value: 'twitter'},
                   {title: 'YouTube', value: 'youtube'},
+                  {title: 'Portfolio', value: 'portfolio'},
                 ],
               },
               validation: (Rule) => Rule.required(),
@@ -132,6 +133,34 @@ export default defineType({
         },
       ],
       validation: (Rule) => Rule.required().min(1).max(4),
+    },
+    {
+      name: 'ctaBox',
+      title: 'Chamada para Ação',
+      type: 'object',
+      fields: [
+        {
+          name: 'text',
+          title: 'Texto da CTA',
+          type: 'string',
+          initialValue: 'Pronto pra dar vida ao seu site?',
+          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: 'buttonText',
+          title: 'Texto do Botão',
+          type: 'string',
+          initialValue: 'Vamos conversar',
+          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: 'buttonLink',
+          title: 'Link do Botão',
+          type: 'string',
+          initialValue: '#contato',
+          validation: (Rule) => Rule.required(),
+        },
+      ],
     },
     {
       name: 'copyright',

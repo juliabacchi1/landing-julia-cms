@@ -7,6 +7,7 @@ import testimonials from './testimonials'
 import faq from './faq'
 import cta from './cta'
 import footer from './footer'
+import posts from './posts'
 
 export const schemaTypes = [
   hero,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   faq,
   cta,
   footer,
+  posts,
 ]

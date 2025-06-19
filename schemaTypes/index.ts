@@ -8,6 +8,7 @@ import faq from './faq'
 import cta from './cta'
 import footer from './footer'
 import posts from './posts'
+import blockContent from './blockContent'
 
 export const schemaTypes = [
   hero,
@@ -20,4 +21,5 @@ export const schemaTypes = [
   cta,
   footer,
   posts,
+  blockContent,
 ]

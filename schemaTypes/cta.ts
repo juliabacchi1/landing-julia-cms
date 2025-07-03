@@ -96,13 +96,5 @@ export default defineType({
       initialValue: 'Solicitar Orçamento',
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: 'termsText',
-      title: 'Texto dos Termos',
-      type: 'text',
-      rows: 2,
-      initialValue: 'Concordo com os termos de serviço e política de privacidade',
-      validation: (Rule) => Rule.required(),
-    },
   ],
 })

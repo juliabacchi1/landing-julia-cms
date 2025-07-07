@@ -5,6 +5,7 @@ import process from './process'
 import pricing from './pricing'
 import testimonials from './testimonials'
 import faq from './faq'
+import project from './project'
 import cta from './cta'
 import footer from './footer'
 import posts from './posts'
@@ -18,6 +19,7 @@ export const schemaTypes = [
   pricing,
   testimonials,
   faq,
+  project,
   cta,
   footer,
   posts,

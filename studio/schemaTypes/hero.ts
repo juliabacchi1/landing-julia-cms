@@ -73,7 +73,7 @@ export default defineType({
       title: 'Imagem de destaque',
       type: 'image',
       options: {hotspot: true},
-      // @ts-expect-error - TypeScript não reconhece "fields" em image, mas funciona no Sanity
+      // @ts-ignore - TypeScript não reconhece "fields" em image, mas funciona no Sanity
       fields: [
         defineField({
           name: 'alt',
